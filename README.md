@@ -99,6 +99,7 @@ docker volume create spatialyze-gsstore-data
 docker run --name     "spatialyze-gsstore"                        \
            --detach                                               \
            --publish  25432:5432                                  \
+           --env      POSTGRES_PASSWORD=postgres                  \
            --volume   spatialyze-gsstore-data:/var/lib/postgresql \
                       postgis/postgis
 ```
