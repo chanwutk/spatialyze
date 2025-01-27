@@ -292,7 +292,7 @@ class KeepOnlyRoadTypePredicates(BaseTransformer):
             road = node.params[0]
             if not isinstance(road, LiteralNode):
                 assert isinstance(road, CallNode), road
-                assert road.fn == F.road_segment('TMP').fn, road
+                assert road.fn == F.road_segment("TMP").fn, road
                 assert len(road.params) == 1, road.params
                 road = road.params[0]
 
